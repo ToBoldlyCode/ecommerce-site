@@ -88,8 +88,6 @@ include("includes/db.php");
 		
 		$insert_product = "insert into products (product_cat,product_title,product_price,product_desc, product_image,product_keywords,popular) values ('$product_cat','$product_title','$product_price','$product_desc','$product_image', '$product_keywords', '$product_popular')";
 		
-		echo $product_popular;
-		
 		$insert_pro = mysqli_query($con, $insert_product);
 		
 		if($insert_pro){
