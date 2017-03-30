@@ -1,0 +1,167 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+
+/*Custom stylesheet begins below*/
+
+#main_wrapper {
+	width:100%;
+	min-height:100%;
+	overflow:auto;
+	background:#F8F8FF;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+#header_bar {
+	width:100%;
+	height:50px;
+	position:fixed;
+	background:black;
+	color:white;
+	z-index:10;
+}
+
+#content_wrapper {
+	margin:auto;
+	float:center;
+	width:75%;
+	height:100%;
+	max-width:1000px;
+}
+
+
+#main_menu {
+	float:left;
+	margin-top:15px;
+	margin-left:15px;
+	position:relative;
+	display:inline-block;
+}
+
+#main_menu:before {
+	content:"Menu";
+	border:1px solid white;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+#main_menu:focus {
+    pointer-events: none;
+}
+
+#main_menu:focus  .flyout {
+	display:block;
+	opacity:1;
+	visibility:visible;
+	pointer-events:auto;
+}
+
+.flyout {
+	position:absolute;
+	z-index:1;
+	width:150px;
+	height:100vh;
+	margin-left:-15px;
+	background:black;
+	opacity:0;
+	visibility:hidden;
+	transition:visibility 0.5s;
+}
+
+.menu_heading {
+	font-size:20px;
+}
+
+.menu_links a{
+	font-size:16px;
+	color:#C0C0C0;
+	text-decoration:none;
+}
+
+#header_link a{
+	margin-top:15px;
+	margin-left:15px;
+	position:relative;
+	display:inline-block;
+	text-decoration:underline;
+	color:#F8F8FF;
+}
+
+#home_link a{
+	float:left;
+}
+
+#cart_menu a{
+	float:right;
+	margin-right:15px;
+}
+
+
+#login a{
+	float:right;
+}
+
+#cat_menu {
+	margin:auto;
+	padding-top:50px;
+	height:50px;
+	background:orange;
+}
+
+#cat_menu ul {
+	height:50px;
+}
+
+#cat_menu li {
+	display:inline;
+	float:left;
+	margin:15px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#search {
+	display:inline;
+	float:right;
+	padding-top:15px;
+	padding-bottom:5px;
+	padding-bottom:5px;
+}
+
+.content_body {
+	width:100%;
+	font-size:14px;
+	text-align:center;
+}
+
+
+.content_body img{
+	max-width:200px;
+	max-height:200px;
+	height:auto;
+	width:100%;
+}
