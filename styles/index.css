@@ -32,8 +32,8 @@ time, mark, audio, video {
 	width:100%;
 	min-height:100%;
 	overflow:auto;
-	background:#F8F8FF;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+	background:whitesmoke;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #header_bar {
@@ -48,8 +48,7 @@ time, mark, audio, video {
 #content_wrapper {
 	margin:auto;
 	float:center;
-	width:75%;
-	height:100%;
+	width:100%;
 	max-width:1000px;
 }
 
@@ -152,16 +151,21 @@ time, mark, audio, video {
 	padding-bottom:5px;
 }
 
+.product_card {
+	background:DarkGray;
+	margin-bottom:4px;
+}
+
 .content_body {
 	width:100%;
-	font-size:14px;
+	font-size:12px;
 	text-align:center;
 }
 
 
 .content_body img{
-	max-width:200px;
-	max-height:200px;
+	max-width:600px;
+	max-height:600px;
 	height:auto;
 	width:100%;
 }

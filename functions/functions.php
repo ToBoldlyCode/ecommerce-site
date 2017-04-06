@@ -28,11 +28,13 @@ function getRand(){
 		$pro_image = $row_product['product_image'];
 		
 		echo "
-				<div class='col-xs-6 col-md-4 col-lg-3'>
+				<div class='col-xs-4 col-md-3'>
+					<div class='product_card'>
 					<a href='details.php?pro_id=$pro_id'><img src='admin/product_images/$pro_image' height='200px' width='200px'/></a>
-					<p>$pro_title</p>
-					<p><b>$$pro_price</b></p>
-					<br>
+					<p><b>$pro_title</br></p>
+					<p style='float:right; color:green; padding-right:2px;'><b>$$pro_price</b></p>
+					</br>
+					</div>
 				</div>
 			";
 	}
@@ -57,11 +59,13 @@ function getNew($cat_id){
 		$pro_image = $row_product['product_image'];
 		
 		echo "
-				<div class='col-xs-6 col-md-4 col-lg-3'>
+				<div class='col-xs-4 col-md-3'>
+					<div class='product_card'>
 					<a href='details.php?pro_id=$pro_id'><img src='admin/product_images/$pro_image' height='200px' width='200px'/></a>
-					<p>$pro_title</p>
-					<p><b>$$pro_price</b></p>
-					<br>
+					<p><b>$pro_title</br></p>
+					<p style='float:right; color:green; padding-right:2px;'><b>$$pro_price</b></p>
+					</br>
+					</div>
 				</div>
 			";
 	}
@@ -86,11 +90,13 @@ function getPopular($cat_id){
 		$pro_image = $row_product['product_image'];
 		
 		echo "
-				<div class='col-xs-6 col-md-4 col-lg-3'>
+				<div class='col-xs-4 col-md-3'>
+					<div class='product_card'>
 					<a href='details.php?pro_id=$pro_id'><img src='admin/product_images/$pro_image' height='200px' width='200px'/></a>
-					<p>$pro_title</p>
-					<p><b>$$pro_price</b></p>
-					<br>
+					<p><b>$pro_title</br></p>
+					<p style='float:right; color:green; padding-right:2px;'><b>$$pro_price</b></p>
+					</br>
+					</div>
 				</div>
 			";
 	}
@@ -115,11 +121,13 @@ function getCategoryProduct($cat_id){
 		$pro_image = $row_product['product_image'];
 		
 		echo "
-				<div class='col-xs-6 col-md-4 col-lg-3'>
+				<div class='col-xs-4 col-md-3'>
+					<div class='product_card'>
 					<a href='details.php?pro_id=$pro_id'><img src='admin/product_images/$pro_image' height='200px' width='200px'/></a>
-					<p>$pro_title</p>
-					<p><b>$$pro_price</b></p>
-					<br>
+					<p><b>$pro_title</br></p>
+					<p style='float:right; color:green; padding-right:2px;'><b>$$pro_price</b></p>
+					</br>
+					</div>
 				</div>
 			";
 	}
