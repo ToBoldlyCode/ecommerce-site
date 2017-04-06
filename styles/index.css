@@ -85,6 +85,7 @@ time, mark, audio, video {
 	width:150px;
 	height:100vh;
 	margin-left:-15px;
+	padding-left:5px;
 	background:black;
 	opacity:0;
 	visibility:hidden;

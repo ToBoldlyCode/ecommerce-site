@@ -37,9 +37,9 @@ include("functions/functions.php")
 						</a>
 					</div>
 					<div id="login">
-						<a href="login.php">
+						<a data-toggle="modal" href="#login_modal">
 							Sign In
-						</a>
+						</a> 		
 					</div>
 				</div>
 			</div>
@@ -71,8 +71,44 @@ include("functions/functions.php")
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>		
 	</body>
+	 
+            <div id="login_modal" class="modal fade" style="display: none; "> 
+			  <div class="modal-dialog">
+				<div class="modal-content">			
+					<div class="modal-header">  
+					<a class="close" data-dismiss="modal">×</a>  
+					<h3>Sign Into Your Account</h3>  
+					</div>  
+					<div class="modal-body">  
+
+
+<form action="/action_page.php">
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <button type="submit" class="btn btn-success">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+	<button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+
+					
+					</div>  
+
+				</div>					
+			 </div>
+        </div>		
+	
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </html>
