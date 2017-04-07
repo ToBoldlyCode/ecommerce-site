@@ -80,23 +80,25 @@ include("functions/functions.php")
 					<div class="modal-header">  
 					<a class="close" data-dismiss="modal">×</a>  
 					<h3>Sign Into Your Account</h3>  
-					</div>  
-					<div class="modal-body">  
+					</div> 
 
-
-<form action="/action_page.php">
-  <div class="container">
+	<div id="login_modal_body">
+<form action="login.php" method="post" enctype="form-data">
+  <div id="login_modal_body">
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-    <button type="submit" class="btn btn-success">Login</button>
+	<div id="login_modal_button">
+    <br><button type="submit">Login</button>
+	</div>
     <input type="checkbox" checked="checked"> Remember me
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-	<button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+  <div id="login_modal_footer">
+    <span id="pw_reset"><a href="#">Forgot password?</a></span>
+	<span id="register_link"><a href="#">Register an Account</a></span>
+	<br>
   </div>
 </form>
 
@@ -107,7 +109,6 @@ include("functions/functions.php")
 				</div>					
 			 </div>
         </div>		
-	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
