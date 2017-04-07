@@ -153,9 +153,19 @@ time, mark, audio, video {
 }
 
 .product_card {
-	background:DarkGray;
+	background:LightGray;
+	padding:1px;
 	margin-bottom:4px;
 }
+
+.product_card img:hover {
+	opacity:.7;
+}
+
+.product_card:hover {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .content_body {
 	width:100%;
