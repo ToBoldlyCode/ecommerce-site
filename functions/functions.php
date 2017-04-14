@@ -124,6 +124,8 @@ function getDetails($pro_id){
 				</div>
 				<div class='col-xs-6'>
 					<p>$pro_desc</p>
+					<form>
+					<input type='number' id='qty'></input>
 					<button type='button' id='add_cart' value=$pro_id>Add to Cart</button>
 				</div>
 			";
@@ -135,19 +137,18 @@ if(isset($_GET['add_cart'])) {
 	global $con;
 	$cart_id = getSession();
 	$pro_id = $_GET['add_cart'];
-	
-	echo "2";
+	$qty = $_GET['qty'];
 	
 	$check_pro = "select * from cart where cart_id = '$cart_id' AND p_id='$pro_id'";
 	$run_check = mysqli_query($con, $check_pro);
 	
 		if(mysqli_num_rows($run_check)>0) {
-			echo "";
+			$update_pro = "update cart set qty = qty + $qty where cart_id = '$cart_id' AND p_id='$pro_id'";
+			$run_pro = mysqli_query($con, $update_pro);
 		}
 		else {
-			$insert_pro = "insert into cart (p_id, cart_id) values ('$pro_id', '$cart_id')";
+			$insert_pro = "insert into cart (p_id, qty, cart_id) values ('$pro_id', '$qty', '$cart_id')";
 			$run_pro = mysqli_query($con, $insert_pro);
-			echo "<script>alert('sucess')</script>";
 		}
 }
 
