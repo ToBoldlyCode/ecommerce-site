@@ -45,30 +45,7 @@ include("functions/functions.php")
 			</div>
 			<div id="content_wrapper">
 				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div id="cat_menu">
-							<div class="row">
-								<div class="col-xs-6">
-								</div>
-								<div class="col-xs-6">
-								<div id="search">
-									<form method="get" action="results.php" enctype="multipart/form-data">
-									<input type="text" name="user_query" placeholder="Search"/>
-									<input type="submit" style="position:absolute; left: -9999px; width:1px; height:1px;" tabindex="-1" />
-									</form>
-								</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				<div class="content_body">
-						<div class="row">
-					<?php
-						getRand();
-					?>
-						</div>
-					</div>
+	
 				</div>
 			</div>
 		</div>		
@@ -78,7 +55,7 @@ include("functions/functions.php")
 				<div class="modal-dialog">
 					<div class="modal-content">			
 						<div class="modal-header">  
-						<a class="close" data-dismiss="modal">Ã—</a>  
+						<a class="close" data-dismiss="modal">×</a>  
 						<h3>Sign Into Your Account</h3>  
 						</div> 
 						<div id="login_modal_body">

@@ -116,6 +116,28 @@ function getDetails($pro_id){
 	}
 }
 
+function addToCart(){
+	if(isset($_GET['add_cart'])) {
+		
+	global $con;
+	$cart_id = getSession();
+	
+	$pro_id = $_GET['add_cart'];
+	
+	$check_pro = "select * from cart where cart_id= '$cart_id' AND p_id='$pro_id'";
+	
+	$run_check = mysqli_query($con, $check_pro);
+	
+		if(mysqli_num_rows($run_check)>0) {
+			echo "";
+		}
+		else {
+			$insert_pro = "insert into cart (p_id, cart_id) values ('$pro_id', '$ip')";
+			$run_pro = mysqli_query($con, $insert_pro);
+			echo "<script>window.open('','_self')</script>";
+		}
+	}
+}
 
 
 ?>
