@@ -7,6 +7,7 @@ include("functions/functions.php")
 		<title>Responsive Modular Ecommerce Sample</title>
 		<link rel= "stylesheet" href="styles/bootstrap.css" media="all" />
 		<link rel= "stylesheet" href="styles/index.css" media="all" />
+		<?php getSession(); ?>
 	</head>
 	<body>
 		<div id="main_wrapper">

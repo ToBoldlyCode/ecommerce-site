@@ -45,7 +45,7 @@ include("functions/functions.php")
 			</div>
 			<div id="content_wrapper">
 				<div class="container">
-	
+				<?php ?>
 				</div>
 			</div>
 		</div>		

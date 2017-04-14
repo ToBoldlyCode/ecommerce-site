@@ -2,6 +2,19 @@
 
 $con = mysqli_connect("localhost", "root", "","ecommerce");
 
+function getSession(){
+	if(isset($_COOKIE['sessionId'])){
+		$id = $_COOKIE['sessionId'];
+	}
+	else {
+	session_start();
+	$id = session_id();
+	setcookie('sessionId', $id);
+	}
+	
+	return $id;
+}
+
 function display_product($run_product) {
 	while($row_product=mysqli_fetch_array($run_product)) {
 		$pro_id = $row_product['product_id'];
@@ -111,33 +124,31 @@ function getDetails($pro_id){
 				</div>
 				<div class='col-xs-6'>
 					<p>$pro_desc</p>
+					<button type='button' id='add_cart' value=$pro_id>Add to Cart</button>
 				</div>
 			";
 	}
 }
 
-function addToCart(){
-	if(isset($_GET['add_cart'])) {
+if(isset($_GET['add_cart'])) {
 		
 	global $con;
 	$cart_id = getSession();
-	
 	$pro_id = $_GET['add_cart'];
 	
-	$check_pro = "select * from cart where cart_id= '$cart_id' AND p_id='$pro_id'";
+	echo "2";
 	
+	$check_pro = "select * from cart where cart_id = '$cart_id' AND p_id='$pro_id'";
 	$run_check = mysqli_query($con, $check_pro);
 	
 		if(mysqli_num_rows($run_check)>0) {
 			echo "";
 		}
 		else {
-			$insert_pro = "insert into cart (p_id, cart_id) values ('$pro_id', '$ip')";
+			$insert_pro = "insert into cart (p_id, cart_id) values ('$pro_id', '$cart_id')";
 			$run_pro = mysqli_query($con, $insert_pro);
-			echo "<script>window.open('','_self')</script>";
+			echo "<script>alert('sucess')</script>";
 		}
-	}
 }
-
 
 ?>
